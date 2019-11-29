@@ -13,7 +13,7 @@ int Create_Daemon()
 		close(STDOUT_FILENO);
 		close(STDIN_FILENO);
 		//chdir("/tmp/");
-		//umask(2);
+		umask(2);
 		//todo
 		//int fd = open("file.log",O_RDWR|O_CREAT,0664);
 		//time_t t;
