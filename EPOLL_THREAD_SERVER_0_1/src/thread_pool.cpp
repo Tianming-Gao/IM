@@ -99,7 +99,7 @@ void* CThread_Pool::thread_custom_job(void* arg)
 			++m_threadpool->thread_busy;
 
 			pthread_mutex_unlock(&m_threadpool->lock);
-			printf("num of task_queue now:%d\n",m_threadpool->queue_size);
+			cout << "num of task_queue now:" << m_threadpool->queue_size << endl;
 			(task.job)(task.arg);
 			pthread_mutex_lock(&m_threadpool->lock);
 			--m_threadpool->thread_busy;
